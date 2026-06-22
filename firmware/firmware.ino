@@ -7,12 +7,12 @@
 const int BOAT_NUMBER = 1;
 
 // WiFi Credentials
-const char* WIFI_SSID = "YOUR_WIFI_NAME";
-const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID = "Shetr";
+const char* WIFI_PASS = "shettybros";
 
 // FastAPI Server
 // Replace with the IP of the machine running the backend
-const char* SERVER_URL = "http://192.168.1.100:8000/update";
+const char* SERVER_URL = "http://192.168.0.106:8000/update";
 
 // -------------------- Hardware Pins --------------------
 // GPS uses HardwareSerial 2 (GPIO16 = RX2, GPIO17 = TX2)

@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { useEffect } from 'react';
 
@@ -30,6 +30,14 @@ const greenIcon = new L.Icon({
   shadowSize: [41, 41]
 });
 
+function ChangeView({ center }) {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(center, map.getZoom());
+  }, [center, map]);
+  return null;
+}
+
 const MapComponent = ({ boats }) => {
   // Center map on the first emergency boat, or first boat, or default location
   const emergencyBoat = boats.find(b => b.status === 1);
@@ -39,6 +47,7 @@ const MapComponent = ({ boats }) => {
   return (
     <div className="h-full w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white/50">
       <MapContainer center={center} zoom={13} style={{ height: '100%', width: '100%' }}>
+        <ChangeView center={center} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
