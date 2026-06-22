@@ -12,7 +12,7 @@ const char* WIFI_PASS = "shettybros";
 
 // FastAPI Server
 // Replace with the IP of the machine running the backend
-const char* SERVER_URL = "http://192.168.0.106:8000/update";
+const char* SERVER_URL = "http://192.168.2.107:8000/update";
 
 // -------------------- Hardware Pins --------------------
 // GPS uses HardwareSerial 2 (GPIO16 = RX2, GPIO17 = TX2)

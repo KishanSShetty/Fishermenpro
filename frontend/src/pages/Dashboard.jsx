@@ -4,7 +4,7 @@ import { Shield, Activity, RefreshCw, Anchor } from 'lucide-react';
 import MapComponent from '../components/MapComponent';
 import BoatCard from '../components/BoatCard';
 
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = 'http://192.168.2.107:8000';
 
 const Dashboard = () => {
   const [boats, setBoats] = useState([]);
